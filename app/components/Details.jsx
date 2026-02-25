@@ -6,7 +6,7 @@ import {
     AccordionItem,
 } from "./Accordion";
 
-const ScoreBadge = ({ score }: { score: number }) => {
+const ScoreBadge = ({ score }) => {
     return (
         <div
             className={cn(
@@ -39,13 +39,7 @@ const ScoreBadge = ({ score }: { score: number }) => {
     );
 };
 
-const CategoryHeader = ({
-                            title,
-                            categoryScore,
-                        }: {
-    title: string;
-    categoryScore: number;
-}) => {
+const CategoryHeader = ({ title, categoryScore }) => {
     return (
         <div className="flex flex-row gap-4 items-center py-2">
             <p className="text-2xl font-semibold">{title}</p>
@@ -54,11 +48,7 @@ const CategoryHeader = ({
     );
 };
 
-const CategoryContent = ({
-                             tips,
-                         }: {
-    tips: { type: "good" | "improve"; tip: string; explanation: string }[];
-}) => {
+const CategoryContent = ({ tips }) => {
     return (
         <div className="flex flex-col gap-4 items-center w-full">
             <div className="bg-gray-50 w-full rounded-lg px-5 py-4 grid grid-cols-2 gap-4">
@@ -106,7 +96,7 @@ const CategoryContent = ({
     );
 };
 
-const Details = ({ feedback }: { feedback: Feedback }) => {
+const Details = ({ feedback }) => {
     return (
         <div className="flex flex-col gap-4 w-full">
             <Accordion>

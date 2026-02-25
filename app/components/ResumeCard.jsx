@@ -1,19 +1,20 @@
-import {Link} from "react-router";
+import { Link } from "react-router";
 import ScoreCircle from "~/components/ScoreCircle";
-import {useEffect, useState} from "react";
-import {usePuterStore} from "~/lib/puter";
+import { useEffect, useState } from "react";
+import { usePuterStore } from "~/lib/puter";
 
-const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback, imagePath } }: { resume: Resume }) => {
+const ResumeCard = ({ resume }) => {
+    const { id, companyName, jobTitle, feedback, imagePath } = resume;
     const { fs } = usePuterStore();
     const [resumeUrl, setResumeUrl] = useState('');
 
     useEffect(() => {
         const loadResume = async () => {
             const blob = await fs.read(imagePath);
-            if(!blob) return;
+            if (!blob) return;
             let url = URL.createObjectURL(blob);
             setResumeUrl(url);
-        }
+        };
 
         loadResume();
     }, [imagePath]);
@@ -42,6 +43,7 @@ const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback, imagePath }
                 </div>
             )}
         </Link>
-    )
-}
-export default ResumeCard
+    );
+};
+
+export default ResumeCard;

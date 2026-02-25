@@ -1,4 +1,4 @@
-import {Link} from "react-router";
+import { Link } from "react-router";
 
 const Navbar = () => {
     return (
@@ -10,6 +10,7 @@ const Navbar = () => {
                 Upload Resume
             </Link>
         </nav>
-    )
-}
-export default Navbar
+    );
+};
+
+export default Navbar;

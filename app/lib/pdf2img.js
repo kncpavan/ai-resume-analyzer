@@ -1,14 +1,19 @@
-export interface PdfConversionResult {
-    imageUrl: string;
-    file: File | null;
-    error?: string;
-}
+/**
+ * @typedef {Object} PdfConversionResult
+ * @property {string} imageUrl
+ * @property {File | null} file
+ * @property {string} [error]
+ */
 
-let pdfjsLib: any = null;
+let pdfjsLib = null;
 let isLoading = false;
-let loadPromise: Promise<any> | null = null;
+let loadPromise = null;
 
-async function loadPdfJs(): Promise<any> {
+/**
+ * Load PDF.js library
+ * @returns {Promise<any>}
+ */
+async function loadPdfJs() {
     if (pdfjsLib) return pdfjsLib;
     if (loadPromise) return loadPromise;
 
@@ -34,9 +39,12 @@ async function loadPdfJs(): Promise<any> {
     return loadPromise;
 }
 
-export async function convertPdfToImage(
-    file: File
-): Promise<PdfConversionResult> {
+/**
+ * Convert PDF file to image
+ * @param {File} file 
+ * @returns {Promise<PdfConversionResult>}
+ */
+export async function convertPdfToImage(file) {
     try {
         console.log("Starting PDF conversion for:", file.name);
         
