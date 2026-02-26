@@ -6,4 +6,5 @@ export default [
     route('/upload', 'routes/upload.jsx'),
     route('/resume/:id', 'routes/resume.jsx'),
     route('/wipe', 'routes/wipe.jsx'),
+    route('/builder', 'routes/builder.jsx'),
 ];
