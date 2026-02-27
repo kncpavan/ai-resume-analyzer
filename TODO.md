@@ -1,63 +1,40 @@
-# Resume Template Feature Implementation - COMPLETED
+# TODO - AI Resume Analyzer MERN Stack Project
 
-## Summary
+## Phase 1: Project Restructuring ✅
+- [x] Create backend/package.json
+- [x] Create backend/src/index.js (Express server)
+- [x] Create backend/src/routes/api.js (API routes)
+- [x] Create backend/.env.example
+- [x] Create backend/README.md
 
-Successfully implemented a resume creation feature with ready-made templates for FAANG companies and normal tech resume templates.
+## Phase 2: Move Frontend Files ✅
+- [x] Move app/ to frontend/
+- [x] Move constants/ to frontend/
+- [x] Move public/ to frontend/
+- [x] Move frontend config files to frontend/
 
-## Files Created/Modified:
+## Phase 3: Update Frontend Configuration ✅
+- [x] Update frontend/vite.config.js path alias
+- [x] Update frontend/package.json scripts
 
-### New Files:
-- [x] `constants/resumeTemplates.js` - Template data with 12 templates (6 FAANG + 6 Tech)
-- [x] `app/routes/builder.jsx` - Main builder page with template selection, form, and PDF preview
+## Phase 4: Clean up Root Directory ✅
+- [x] Remove old directories from root
+- [x] Update root-level README
 
-### Modified Files:
-- [x] `app/routes.js` - Added /builder route
-- [x] `app/components/Navbar.jsx` - Added "Create Resume" button
+## Phase 5: Build Complete MERN Backend ✅
+- [x] Set up MongoDB connection with Mongoose
+- [x] Create User model with authentication
+- [x] Create Resume model with file handling
+- [x] Implement authentication middleware
+- [x] Create auth routes (register, login, profile management)
+- [x] Create resume routes (CRUD operations with file upload)
+- [x] Update server.js with proper middleware and error handling
+- [x] Add environment configuration
+- [x] Update package.json with required dependencies
 
-### Dependencies:
-- [x] `html2pdf.js` - For PDF generation
-
-## Features Implemented:
-
-### 1. Template Selection
-- 6 FAANG company templates:
-  - Google - Technical
-  - Meta - Technical
-  - Apple - Technical
-  - Amazon - Technical
-  - Netflix - Technical
-  - Microsoft - Technical
-- 6 Tech industry templates:
-  - Startup - Modern
-  - Enterprise - Professional
-  - General Tech
-  - Data Science
-  - Product Manager
-  - DevOps Engineer
-
-### 2. Resume Builder Form
-- Personal Information (name, email, phone, location, linkedin, github)
-- Professional Summary
-- Skills
-- Experience (multiple entries with add/remove)
-- Education (multiple entries with add/remove)
-- Projects (multiple entries with add/remove)
-
-### 3. Live Preview & PDF Download
-- Real-time resume preview
-- PDF download with company-specific styling
-- Template-specific tips for each company
-
-### 4. Navigation
-- New "Create Resume" button in Navbar
-- New /builder route
-
-## To Run the Application:
-```
-bash
-npm run dev
-```
-
-Then navigate to:
-- http://localhost:5173/builder - Create a new resume
-- Click "Create Resume" button in the navbar
+## Phase 6: Testing and Deployment
+- [x] Install backend dependencies
+- [x] Create .env file from .env.example
+- [x] Test backend API endpoints (server running successfully)
+- [ ] Set up frontend-backend integration
+- [ ] Deploy to production

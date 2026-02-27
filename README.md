@@ -77,11 +77,10 @@ System returns structured feedback with improvement suggestions.
 Project Structure
 AI-Resume-Analyzer/
 │
-├── client/           # React frontend
-├── server/           # Node + Express backend
-├── controllers/      # Business logic
-├── routes/           # API routes
-├── package.json
+├── frontend/         # React frontend (React Router + Vite)
+├── backend/          # Node + Express backend
+├── types/            # TypeScript type definitions
+├── package.json      # Root package.json for workspace
 └── README.md
 Installation and Setup
 
@@ -90,15 +89,12 @@ Clone the repository
 git clone https://github.com/kncpavan/ai-resume-analyzer.git
 cd ai-resume-analyzer
 
-Install backend dependencies
+Install all dependencies
 
-cd server
 npm install
-
-Install frontend dependencies
-
-cd client
-npm install
+# or for frontend/backend separately:
+cd frontend && npm install
+cd backend && npm install
 
 Add environment variables
 
